@@ -1,0 +1,23 @@
+<html>
+ <head>
+  <script type="text/javascript">
+  function visPass () {
+  var id = document.forms[0].lid.value; <!-- //lidから値を受け取る -->
+  var pw = document.forms[0].lpw.value; <!-- //lpwから値を受け取る -->
+  var cid = "QWER" <!-- //正しいID -->
+  var cpw = "ASDF" <!-- //正しいpw -->
+  if(id == cid && pw == cpw){window.open('http://www.ied.inf.uec.ac.jp/','','width=1920,height=1080');}
+  else{window.alert("Password incorrect");}
+  }
+  </script>
+ </head>
+ <body>
+   <form>　<!-- //forms[0]に対応 -->
+     <p>Input login ID: <input type = "text" name = "lid" size="10"></p>
+     <p>Input password: <input type = "password" name = "lpw" size="10">
+     <input type = "button" value = "login" name = "btn" onclick = "visPass()"></p>
+     <!-- //ボタンを押した時visPass()を実行する -->
+     
+  </form>
+ </body>
+</html>

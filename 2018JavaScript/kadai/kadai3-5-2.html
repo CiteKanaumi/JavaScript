@@ -1,0 +1,21 @@
+<html>
+ <head>
+   <script type="text/javascript">
+     function count()
+     {
+     var kijunday = new Date(2019, 0, 1); <!-- //2019/1/1をkijundayに代入する -->
+     var today = new Date(); <!-- //現在をtodayに代入する -->
+     var rest = parseInt ((kijunday - today)/1000); <!-- //差を求め、msをsに変えて代入する -->
+     var s = Math.floor(rest%60);
+     var m = Math.floor(rest/60)%60;
+     var h = Math.floor(rest/60/60)%24;
+     var d = Math.floor(rest/60/60/24);
+     document.getElementById("cc").innerText ="あと "+d+"日"+h+"時間"+s+"秒 残っています。";
+     }
+  </script>
+ </head>
+ <body onload = "setInterval('count()',1000)">
+   <div id="cc"></div>
+   <p><input type = "button" value = "閉じる" onClick = "window.close()"></p>
+ </body>
+</html>

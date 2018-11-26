@@ -1,0 +1,42 @@
+<html>
+ <head>
+  <script type="text/javascript">
+    function scrclr () {
+    for (i=0; i<document.tstform.length; i++) {
+	if (document.tstform.elements[i].type != "button") {
+        document.tstform.elements[i].value = "";
+        }
+    }
+    document.tstform.english.focus ( );
+    }
+
+function cave () {
+if (document.tstform.math.value <= 59) {document.tstform.mcmnt.value = "不可";}
+else if (document.tstform.math.value < 70) {document.tstform.mcmnt.value = "可";}
+else if (document.tstform.math.value < 80) {document.tstform.mcmnt.value = "良";}
+else if (document.tstform.math.value < 90) {document.tstform.mcmnt.value = "優";}
+else {document.tstform.mcmnt.value = "秀";}
+
+if (document.tstform.english.value <= 59) {document.tstform.ecmnt.value = "不可";}
+else if (document.tstform.english.value < 70) {document.tstform.ecmnt.value = "可";}
+else if (document.tstform.english.value < 80) {document.tstform.ecmnt.value = "良";}
+else if (document.tstform.english.value < 90) {document.tstform.ecmnt.value = "優";}
+else {document.tstform.ecmnt.value = "秀";}
+<!-- //各科目のvalue毎、*cmntのvalueを与える --> 
+}
+
+</script>
+</head>
+ <body onload = "scrclr ( )">
+  <form name = "tstform">
+    英語の点数：<input type = "text" name = "english" size = 3>点&nbsp;
+    数学の点数：<input type = "text" name = "math" size = 3>点<br>
+  <input type = "button" onclick = "cave()" value = "入力">
+  <input type = "button" onclick = "scrclr ()" value = "キャンセル">
+  <p>評価<br>
+    英語:<input type = "text" name = "ecmnt" size = 3><br>
+    数学:<input type = "text" name = "mcmnt" size = 3><br>
+  </form>
+ </body>
+
+</html>

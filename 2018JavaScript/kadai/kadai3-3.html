@@ -1,0 +1,25 @@
+<html>
+ <head>
+   <script type="text/javascript">
+     window.onload = function(){
+     document.bkmkmenu.bkmks.options[Math.floor(Math.random()*3)].selected = true; <!-- //optionをselectedにする -->
+     pmove();<!-- //pmove()を実行する -->
+     }
+     function pmove(){
+     var sel = document.bkmkmenu.bkmks.selectedIndex; <!-- //選択された値をselに代入する -->
+     var img = document.getElementById("image"); <!-- //id:imageの要素をimgに代入する -->
+     img.src = document.bkmkmenu.bkmks.options[sel].value; <!-- //options[sel].valueを画像化する -->
+     }
+   </script>
+ </head>
+ <body>
+   <form name = "bkmkmenu">
+     <select name ="bkmks" onchange = "pmove()">
+       <option value = "imgGreece1.jpg">imgGreece1.jpg
+       <option value = "imgGreece2.jpg">imgGreece2.jpg
+       <option value = "imgGreece3.jpg">imgGreece3.jpg
+     </select>
+   </form>
+   <img id="image"> <!-- //画像位置の指定 -->
+ </body>
+</html>

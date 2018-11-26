@@ -1,0 +1,13 @@
+<html>
+ <head>
+  <script type="text/javascript">
+
+  </script>
+ </head>
+ <body>
+   <form>
+     <input type = "button" value = "login" name = "btn" onclick = "visPass()">
+     
+  </form>
+ </body>
+</html>

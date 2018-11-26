@@ -1,0 +1,26 @@
+<html>
+  <head>
+  <script type="text/javascript">
+    function pmove () {
+    var col = new Array("red","blue","yellow","black","green"); <!-- //カラーバリエーション -->
+    var mj = document.getElementById("moji"); <!-- //mojiの要素をmjに代入する -->
+    for (i=0; i<document.bkmkmenu.bkmks.length; i++) {
+	if (document.bkmkmenu.elements[i].checked) {　<!-- //checkされている要素を探索 -->
+	mj.style.color = col[document.bkmkmenu.elements[i].value]; <!-- //mjの色をcol[document.bkmkmenu.elements[i].value]にする -->
+     }
+    }
+   }
+  </script>
+ </head>
+ <body>
+  <form name = "bkmkmenu">
+   <input type = "radio" name = "bkmks" value = "0" >赤<br>
+   <input type = "radio" name = "bkmks" value = "1" >青<br>
+   <input type = "radio" name = "bkmks" value = "2" >黄<br>
+   <input type = "radio" name = "bkmks" value = "3" >黒<br>
+   <input type = "radio" name = "bkmks" value = "4" >緑<br>
+   <input type = "button" value = "文字色変更" onclick = "pmove ()">
+  </form>
+  <p id="moji">&#9632;&#9632;&#9632;&#9632;&#9632;</p>
+ </body>
+</html>

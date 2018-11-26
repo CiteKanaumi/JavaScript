@@ -1,0 +1,23 @@
+<html>
+ <head>
+  <script type="text/javascript">
+   function pmove(){
+    var selected = document.bkmkmenu.bkmks.selectedIndex;
+    if (selected > 0) {
+    window.open(document.bkmkmenu.bkmks.options[selected].value,'','width=1920,height=1080');
+    }
+   }
+  </script>
+ </head>
+ <body>
+   <h1>ホーム</h1>
+  <form name = "bkmkmenu">
+   <select name ="bkmks" onchange = "pmove()">
+    <option>項目
+    <option value = "kadai3-5-1.html">ブックマーク集
+    <option value = "kadai3-5-2.html">2018年の残り時間
+    <option value = "kadai3-5-3.html">背景色自動変更
+    </select>
+  </form>
+ </body>
+</html>

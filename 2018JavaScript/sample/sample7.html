@@ -1,0 +1,26 @@
+html>
+ <head>
+  <script type="text/javascript">
+   function itemcheck () {
+    for (i=0; i<document.cb1.length-1; i++) {
+     if (document.cb1.elements[i].checked) {
+      alert (i+1 + "番目の映画はチェック済み");
+     } else {
+      alert (i+1 + "番目の映画は未チェック");
+     }
+    }
+   }
+  </script>
+ </head>
+ <body>
+  <form name = "cb1">
+   <input type = "checkbox" value = "the lord of the ring-i">the lord of the ring-i<br>
+   <input type = "checkbox" value = "the lord of the ring-ii">the lord of the ring-ii<br>
+   <input type = "checkbox" value = "the lord of the ring-iii">the lord of the ring-iii<br>
+   <input type = "checkbox" value = "pirates of the caribbean">pirates of the caribbean<br>
+   <input type = "checkbox" value = "timeline">timeline<br>
+   <p>
+   <input type = "button" value = "press here" onclick = "itemcheck ()">
+  </form>
+ </body>
+</html>
